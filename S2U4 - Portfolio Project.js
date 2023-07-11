@@ -1,22 +1,25 @@
 
-//Find random number between 0 and 3.
-let numRandom = Math.floor(Math.random()*4);
-console.log(numRandom);
+//Function - returns a random number for index selection
+const getRandomNum = num => {
+    return Math.floor(Math.random()*(num));
+}
 
+//Object that stores our character information
 let storage = {
     name : ["Brent", "Claire", "Charlie", "Kevin", "Sideways", "Butch", "Cereal-killer"],
-    type: ["Assault", "Medic", "Engineer", "Support", "Recon", "Scount", "Commander"],
-    slogan: ["destroy", "love", "suprise", "ambush", "care", "anihilate", "kill", "eat", "butcher"], //I'm gonna () the enemy
+    type: ["Assault", "Medic", "Engineer", "Support", "Recon", "Scout", "Commander"],
+    slogan: ["destroy", "love", "suprise", "ambush", "take care of", "anihilate", "kill", "eat", "butcher", "have tea time", "duel", "dance with"], //I'm gonna () the enemy
 };
 
-
-
-if (numRandom === 0) {
-    console.log("You are an amazing human being!");
-} else if (numRandom === 1) {
-    console.log("No matter how tough life is, you just got to find something to get you up in the morning. Find something that brings you joy!");
-} else if (numRandom === 3) {
-    console.log("You got this!");
-} else {
-    console.log("Wow! You're amazing");
+const getCharacter = (name, type, slogan) => {
+    
+    console.log(`My name is ${name}.`);
+    console.log(`I play ${type}.`);
+    console.log(`I'm going to ${slogan} the enemy!`);
 }
+
+let getName = storage.name[getRandomNum(storage.name.length)];
+let getType = storage.type[getRandomNum(storage.type.length)];
+let getSlogan = storage.slogan[getRandomNum(storage.slogan.length)]
+
+getCharacter(getName, getType, getSlogan);
