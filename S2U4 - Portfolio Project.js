@@ -3,6 +3,14 @@
 let numRandom = Math.floor(Math.random()*4);
 console.log(numRandom);
 
+let storage = {
+    name : ["Brent", "Claire", "Charlie", "Kevin", "Sideways", "Butch", "Cereal-killer"],
+    type: ["Assault", "Medic", "Engineer", "Support", "Recon", "Scount", "Commander"],
+    slogan: ["destroy", "love", "suprise", "ambush", "care", "anihilate", "kill", "eat", "butcher"], //I'm gonna () the enemy
+};
+
+
+
 if (numRandom === 0) {
     console.log("You are an amazing human being!");
 } else if (numRandom === 1) {
