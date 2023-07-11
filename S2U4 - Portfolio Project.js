@@ -6,9 +6,9 @@ const getRandomNum = num => {
 
 //Object that stores our character information
 let storage = {
-    name : ["Brent", "Claire", "Charlie", "Kevin", "Sideways", "Butch", "Cereal-killer"],
+    name : ["Brent", "Claire", "Charlie", "Kevin", "Sideways", "Butch", "Cereal-killer", "Nelly"],
     type: ["Assault", "Medic", "Engineer", "Support", "Recon", "Scout", "Commander"],
-    slogan: ["destroy", "love", "suprise", "ambush", "take care of", "anihilate", "kill", "eat", "butcher", "have tea time", "duel", "dance with"], //I'm gonna () the enemy
+    slogan: ["destroy", "love", "suprise", "ambush", "take care of", "anihilate", "kill", "eat", "butcher", "have tea time", "duel", "dance with", "cuddle", " get killed by"], //I'm gonna () the enemy
 };
 
 const getCharacter = (name, type, slogan) => {
@@ -23,3 +23,4 @@ let getType = storage.type[getRandomNum(storage.type.length)];
 let getSlogan = storage.slogan[getRandomNum(storage.slogan.length)]
 
 getCharacter(getName, getType, getSlogan);
+
